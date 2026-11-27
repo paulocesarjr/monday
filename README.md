@@ -19,6 +19,7 @@ Atenção primeiro
 
 | Command | What it does |
 |---|---|
+| `/monday:setup` | Friendly onboarding: gets to know you and connects your tools |
 | `/monday:morning` | Morning briefing: meetings, tickets, mentions, notes |
 | `/monday:daily` | Drafts your standup (yesterday / today / blockers) |
 | `/monday:focus 90m PROJ-123` | Blocks time, sets Slack status, plays focus music |
@@ -34,7 +35,9 @@ Inside Claude Code:
 /plugin install monday@monday
 ```
 
-Then run `/mcp` to sign in to each service (OAuth in the browser, no API keys to paste).
+Then run **`/monday:setup`**. Monday will introduce herself, ask a few questions (name, role, working hours...) and walk you through connecting each service via OAuth (no API keys to paste).
+
+Your profile is saved locally at `~/.monday/profile.md`. It never leaves your machine or goes into any repo, and you can edit it anytime.
 
 ### Integrations
 

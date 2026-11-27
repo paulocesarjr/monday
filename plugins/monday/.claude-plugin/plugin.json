@@ -1,0 +1,10 @@
+{
+  "name": "monday",
+  "version": "0.1.0",
+  "description": "A friendly daily assistant for developers. Briefings, standups and focus mode across Jira, Notion, Slack, Outlook and Spotify.",
+  "author": {
+    "name": "Paulo Prado"
+  },
+  "license": "MIT",
+  "keywords": ["assistant", "productivity", "jira", "notion", "slack", "outlook", "spotify"]
+}

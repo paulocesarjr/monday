@@ -1,0 +1,16 @@
+{
+  "name": "monday",
+  "owner": {
+    "name": "Paulo Prado"
+  },
+  "metadata": {
+    "description": "Monday: a friendly daily assistant plugin for developers."
+  },
+  "plugins": [
+    {
+      "name": "monday",
+      "source": "./plugins/monday",
+      "description": "Monday — a friendly daily assistant for developers: calendar, notes, tickets, chat and music in one place."
+    }
+  ]
+}

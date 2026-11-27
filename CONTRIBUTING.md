@@ -41,6 +41,33 @@ Create `plugins/monday/commands/<name>.md` with a `description` in the frontmatt
 2. If it's universally useful, add it to `plugins/monday/.mcp.json`. If it needs per-user setup (API apps, keys), document it in `docs/integrations.md` instead.
 3. Update the integrations table in `README.md` and in `skills/monday/SKILL.md`.
 
+## Versioning
+
+Claude Code caches installed plugins **per version**. If you change anything under `plugins/monday/` without bumping `version` in `plugins/monday/.claude-plugin/plugin.json`, users who update will keep the old copy.
+
+Every PR that changes the plugin must bump the version, following [SemVer](https://semver.org):
+
+| Change | Example |
+|---|---|
+| Bug fix, prompt tweak, docs inside the plugin | `0.2.0` → `0.2.1` |
+| New command, integration or feature | `0.2.0` → `0.3.0` |
+| Breaking change (renamed command, profile format change) | `0.x` → `1.0.0` |
+
+Changes only to repo docs (`README.md`, `CONTRIBUTING.md`, `docs/`) don't need a bump.
+
+To test an update locally after a bump:
+
+```
+/plugin marketplace update monday
+/plugin uninstall monday@monday
+/plugin install monday@monday
+/reload-plugins
+```
+
+## Commit messages
+
+Use [Conventional Commits](https://www.conventionalcommits.org): `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`...
+
 ## Rules
 
 - Never commit credentials, tokens or client secrets.

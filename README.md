@@ -1,5 +1,16 @@
 # M.O.N.D.A.Y. 🗓️
 
+```
+        o       o
+    .---|-------|---.
+    |  M O N D A Y  |
+    |---------------|
+    |   ^       ^   |
+    |               |
+    |    \_____/    |
+    '---------------'
+```
+
 > **M**eetings, **O**bjectives, **N**otes, **D**eadlines, **A**lerts & **Y**ou
 >
 > A friendly daily assistant for developers. Inspired by the AI sidekicks we grew up watching in movies.

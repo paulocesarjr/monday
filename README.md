@@ -1,5 +1,7 @@
-# Monday 🗓️
+# M.O.N.D.A.Y. 🗓️
 
+> **M**eetings, **O**bjectives, **N**otes, **D**eadlines, **A**lerts & **Y**ou
+>
 > A friendly daily assistant for developers. Inspired by the AI sidekicks we grew up watching in movies.
 
 Monday is a [Claude Code](https://code.claude.com) plugin that brings your calendar, notes, tickets, chat and music into a single conversation, with a warm personality and a "read freely, write carefully" safety rule.

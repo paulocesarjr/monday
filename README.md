@@ -48,7 +48,7 @@ Your profile is saved locally at `~/.monday/profile.md`. It never leaves your ma
 | Jira | ✅ Bundled | Atlassian remote MCP |
 | Notion | ✅ Bundled | Notion remote MCP |
 | Slack | ✅ Bundled | Official Slack remote MCP (your workspace admin must approve MCP) |
-| Outlook Calendar | 🧪 Optional | See [docs/integrations.md](docs/integrations.md) |
+| Outlook (mail + calendar) | ✅ Chosen in setup | Community Microsoft 365 MCP, work or personal account (device code sign-in) |
 | Spotify | 🧪 Optional | See [docs/integrations.md](docs/integrations.md) (Premium required for playback) |
 
 Monday works with whatever subset you install. Missing connectors are skipped.

@@ -46,10 +46,28 @@ Run `/mcp`, pick **slack** and sign in. Your **Slack workspace admin must approv
 If you also installed Slack's official plugin (`/plugin install slack`), keep only one of the two so the tools aren't duplicated.
 Docs: https://docs.slack.dev/ai/slack-mcp-server/connect-to-claude
 
-## Outlook Calendar (optional, TODO)
+## Outlook / Microsoft 365 (chosen during setup)
 
-Uses Microsoft Graph. Requires an app registration in Microsoft Entra ID (Azure), and many company tenants block user consent, so check with IT.
-We haven't picked a recommended MCP server yet. Contributions are welcome!
+Monday uses the community [`@softeria/ms-365-mcp-server`](https://github.com/Softeria/ms-365-mcp-server) (MIT), which talks to Microsoft Graph and ships with a built-in app, so you don't need to register one in Entra ID. It runs locally through `npx` (Node.js 20+), and tokens are cached in your OS keychain. Monday enables only the `outlook` preset (mail, calendar and contacts).
+
+`/monday:setup` registers it only if you say you use Outlook. To do it by hand:
+
+```bash
+# Work or school account (Microsoft 365)
+claude mcp add -s user ms365 -- npx -y @softeria/ms-365-mcp-server --org-mode --preset outlook
+
+# Personal account (Outlook.com / Hotmail)
+claude mcp add -s user -e MS365_MCP_TENANT_ID=consumers ms365 -- npx -y @softeria/ms-365-mcp-server --preset outlook
+```
+
+Add `--read-only` if you want Monday to only read (no drafts, sending or calendar changes; focus mode won't be able to block time).
+On Windows, wrap the command: `-- cmd /c "npx -y @softeria/ms-365-mcp-server --org-mode --preset outlook"`.
+
+Restart Claude Code, then ask Monday to sign in to Outlook. It calls the server's `login` tool, which shows a URL and a code (device code flow). Open the URL, type the code and sign in. You can also sign in from a terminal: `npx -y @softeria/ms-365-mcp-server --login` (add the same `--org-mode` or `MS365_MCP_TENANT_ID` you used above).
+
+**Company tenants:** many organizations block user consent for third-party apps. If sign-in says an admin needs to approve it, ask IT. `npx -y @softeria/ms-365-mcp-server --org-mode --preset outlook --list-permissions` lists the Graph permissions to send them.
+
+**Official alternatives:** Microsoft's own Work IQ Mail/Calendar MCP servers (Agent 365) need a Microsoft 365 Copilot license and a tenant admin to enable them. On Claude Team/Enterprise plans, an admin can also enable the Microsoft 365 connector in claude.ai, and its tools then show up in Claude Code. Monday works with any of them; keep only one connected so the tools aren't duplicated.
 
 ## Spotify (optional, TODO)
 

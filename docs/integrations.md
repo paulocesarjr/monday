@@ -70,8 +70,3 @@ Restart Claude Code, then ask Monday to sign in to Outlook. It calls the server'
 **Company tenants:** many organizations block user consent for third-party apps. If sign-in says an admin needs to approve it, ask IT. `npx -y @softeria/ms-365-mcp-server --org-mode --preset outlook --list-permissions` lists the Graph permissions to send them.
 
 **Official alternatives:** Microsoft's own Work IQ Mail/Calendar MCP servers (Agent 365) need a Microsoft 365 Copilot license and a tenant admin to enable them. On Claude Team/Enterprise plans, an admin can also enable the Microsoft 365 connector in claude.ai, and its tools then show up in Claude Code. Monday works with any of them; keep only one connected so the tools aren't duplicated.
-
-## Spotify (optional, TODO)
-
-Uses the Spotify Web API. Each user creates their own app at https://developer.spotify.com. Controlling playback requires **Spotify Premium**.
-We haven't picked a recommended MCP server yet. Contributions are welcome!

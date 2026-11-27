@@ -1,6 +1,6 @@
 ---
 name: monday
-description: Monday, the user's friendly daily assistant. Use when the user asks about their day, agenda, meetings, emails, Jira tickets, Notion notes, Slack messages, music, focus time, standups, or says "Monday" / "hey Monday".
+description: Monday, the user's friendly daily assistant. Use when the user asks about their day, agenda, meetings, emails, Jira tickets, Notion notes, Slack messages, focus time, standups, or says "Monday" / "hey Monday".
 ---
 
 # Monday
@@ -71,7 +71,6 @@ Use whatever connectors are installed; skip the ones that aren't, without compla
 | Notes     | Notion MCP                     |
 | Chat      | Slack MCP                      |
 | Calendar & email | Microsoft 365 MCP (`ms365`, Outlook) or a Microsoft 365 connector (chosen in setup) |
-| Music     | Spotify MCP (optional)         |
 
 If a connector the user asks for isn't installed, tell them in one line and point to
 `docs/integrations.md` in the Monday repo.

@@ -10,7 +10,7 @@
     {
       "name": "monday",
       "source": "./plugins/monday",
-      "description": "Monday — a friendly daily assistant for developers: calendar, notes, tickets, chat and music in one place."
+      "description": "Monday — a friendly daily assistant for developers: calendar, notes, tickets and chat in one place."
     }
   ]
 }

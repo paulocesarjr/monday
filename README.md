@@ -15,7 +15,7 @@
 >
 > A friendly daily assistant for developers. Inspired by the AI sidekicks we grew up watching in movies.
 
-Monday is a [Claude Code](https://code.claude.com) plugin that brings your calendar, notes, tickets, chat and music into a single conversation, with a warm personality and a "read freely, write carefully" safety rule.
+Monday is a [Claude Code](https://code.claude.com) plugin that brings your calendar, notes, tickets and chat into a single conversation, with a warm personality and a "read freely, write carefully" safety rule.
 
 ```
 > /monday:morning
@@ -35,7 +35,7 @@ Atenção primeiro
 | `/monday:setup` | Friendly onboarding: gets to know you and connects your tools |
 | `/monday:morning` | Morning briefing: meetings, tickets, PRs/MRs to review, mentions, notes |
 | `/monday:daily` | Drafts your standup (yesterday / today / blockers) |
-| `/monday:focus 90m PROJ-123` | Blocks time, sets Slack status, plays focus music |
+| `/monday:focus 90m PROJ-123` | Blocks time, sets Slack status, pulls up the task |
 
 You can also just talk to it: *"Monday, what's on my plate this afternoon?"*
 
@@ -62,7 +62,6 @@ Your profile is saved locally at `~/.monday/profile.md`. It never leaves your ma
 | Notion | ✅ Bundled | Notion remote MCP |
 | Slack | ✅ Bundled | Official Slack remote MCP (your workspace admin must approve MCP) |
 | Outlook (mail + calendar) | ✅ Chosen in setup | Community Microsoft 365 MCP, work or personal account (device code sign-in) |
-| Spotify | 🧪 Optional | See [docs/integrations.md](docs/integrations.md) (Premium required for playback) |
 
 Monday works with whatever subset you install. Missing connectors are skipped.
 
@@ -76,7 +75,7 @@ PRs welcome. New commands, new integrations (Google Calendar, Linear, Bitbucket.
 
 ## Disclaimer
 
-Monday is an independent open-source project. It is not affiliated with Marvel, Disney, monday.com, Anthropic, Atlassian, Notion, Slack, Microsoft or Spotify.
+Monday is an independent open-source project. It is not affiliated with Marvel, Disney, monday.com, Anthropic, Atlassian, Notion, Slack or Microsoft.
 
 ## License
 

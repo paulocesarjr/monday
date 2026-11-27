@@ -1,10 +1,10 @@
 {
   "name": "monday",
   "version": "0.3.1",
-  "description": "M.O.N.D.A.Y. (Meetings, Objectives, Notes, Deadlines, Alerts & You): a friendly daily assistant for developers. Briefings, standups and focus mode across Jira, Notion, Slack, Outlook and Spotify.",
+  "description": "M.O.N.D.A.Y. (Meetings, Objectives, Notes, Deadlines, Alerts & You): a friendly daily assistant for developers. Briefings, standups and focus mode across Jira, Notion, Slack and Outlook.",
   "author": {
     "name": "Paulo Prado"
   },
   "license": "MIT",
-  "keywords": ["assistant", "productivity", "jira", "notion", "slack", "outlook", "spotify"]
+  "keywords": ["assistant", "productivity", "jira", "notion", "slack", "outlook"]
 }

@@ -76,7 +76,6 @@ integrations:
   slack: <connected | pending | skipped>
   outlook: <connected | pending | skipped>
   outlook_account: <work | personal; empty if not used>
-  spotify: <connected | pending | skipped>
 created_at: <YYYY-MM-DD>
 ---
 
@@ -173,7 +172,6 @@ what to type (you cannot open the OAuth flow yourself):
 | Jira | Type `/mcp`, pick **atlassian**, sign in in the browser |
 | Notion | Type `/mcp`, pick **notion**, sign in and choose which pages Monday can see |
 | Slack | Type `/mcp`, pick **slack**, sign in in the browser (their workspace admin must approve MCP; if they already installed Slack's official plugin, tell them to keep only one of the two) |
-| Spotify | Not bundled yet; mark `pending` and point to `docs/integrations.md` in the Monday repo |
 
 After each one, ask them to say "pronto" (or "pula"), verify the tools are now available
 when possible, and update the `integrations` section of the profile. Note: tools from a

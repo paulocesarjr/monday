@@ -47,7 +47,7 @@ Your profile is saved locally at `~/.monday/profile.md`. It never leaves your ma
 | GitLab | ✅ Chosen in setup | Built-in GitLab MCP, gitlab.com or self-hosted (OAuth) |
 | Jira | ✅ Bundled | Atlassian remote MCP |
 | Notion | ✅ Bundled | Notion remote MCP |
-| Slack | ✅ Via official plugin | `/plugin install slack` (your workspace admin must approve MCP) |
+| Slack | ✅ Bundled | Official Slack remote MCP (your workspace admin must approve MCP) |
 | Outlook Calendar | 🧪 Optional | See [docs/integrations.md](docs/integrations.md) |
 | Spotify | 🧪 Optional | See [docs/integrations.md](docs/integrations.md) (Premium required for playback) |
 

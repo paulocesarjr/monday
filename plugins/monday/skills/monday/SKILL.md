@@ -39,7 +39,7 @@ Use whatever connectors are installed; skip the ones that aren't, without compla
 | Code      | GitHub MCP or GitLab MCP (whichever the user chose in setup) |
 | Tickets   | Atlassian MCP (Jira)           |
 | Notes     | Notion MCP                     |
-| Chat      | Slack MCP (official Slack plugin) |
+| Chat      | Slack MCP                      |
 | Calendar  | Outlook / Microsoft Graph MCP (optional) |
 | Music     | Spotify MCP (optional)         |
 

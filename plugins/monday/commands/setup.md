@@ -115,7 +115,7 @@ what to type (you cannot open the OAuth flow yourself):
 |---|---|
 | Jira | Type `/mcp`, pick **atlassian**, sign in in the browser |
 | Notion | Type `/mcp`, pick **notion**, sign in and choose which pages Monday can see |
-| Slack | Type `/plugin install slack`, then `/mcp` → **slack** (their workspace admin must approve MCP) |
+| Slack | Type `/mcp`, pick **slack**, sign in in the browser (their workspace admin must approve MCP; if they already installed Slack's official plugin, tell them to keep only one of the two) |
 | Outlook | Not bundled yet; mark `pending` and point to `docs/integrations.md` in the Monday repo |
 | Spotify | Not bundled yet; mark `pending` and point to `docs/integrations.md` in the Monday repo |
 

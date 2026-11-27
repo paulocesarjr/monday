@@ -38,15 +38,12 @@ Notion's official remote MCP server: `https://mcp.notion.com/mcp`.
 Run `/mcp`, pick **notion** and sign in. Choose which pages and workspaces Monday can see.
 Docs: https://developers.notion.com/guides/mcp/get-started-with-mcp
 
-## Slack (official plugin)
+## Slack (bundled)
 
-Slack publishes its own Claude Code plugin with the official MCP server (`https://mcp.slack.com/mcp`):
+Slack's official remote MCP server: `https://mcp.slack.com/mcp`, using the same OAuth configuration as Slack's own Claude plugin.
+Run `/mcp`, pick **slack** and sign in. Your **Slack workspace admin must approve MCP integration** before you can authenticate.
 
-```
-/plugin install slack
-```
-
-Your **Slack workspace admin must approve MCP integration** before you can authenticate.
+If you also installed Slack's official plugin (`/plugin install slack`), keep only one of the two so the tools aren't duplicated.
 Docs: https://docs.slack.dev/ai/slack-mcp-server/connect-to-claude
 
 ## Outlook Calendar (optional, TODO)

@@ -20,7 +20,7 @@ Atenção primeiro
 | Command | What it does |
 |---|---|
 | `/monday:setup` | Friendly onboarding: gets to know you and connects your tools |
-| `/monday:morning` | Morning briefing: meetings, tickets, mentions, notes |
+| `/monday:morning` | Morning briefing: meetings, tickets, PRs/MRs to review, mentions, notes |
 | `/monday:daily` | Drafts your standup (yesterday / today / blockers) |
 | `/monday:focus 90m PROJ-123` | Blocks time, sets Slack status, plays focus music |
 
@@ -43,6 +43,8 @@ Your profile is saved locally at `~/.monday/profile.md`. It never leaves your ma
 
 | Service | Status | How |
 |---|---|---|
+| GitHub | ✅ Chosen in setup | Official GitHub MCP (token via `gh` or PAT) |
+| GitLab | ✅ Chosen in setup | Built-in GitLab MCP, gitlab.com or self-hosted (OAuth) |
 | Jira | ✅ Bundled | Atlassian remote MCP |
 | Notion | ✅ Bundled | Notion remote MCP |
 | Slack | ✅ Via official plugin | `/plugin install slack` (your workspace admin must approve MCP) |
@@ -57,7 +59,7 @@ Monday reads freely, but **asks before doing anything others can see or that cha
 
 ## Contributing
 
-PRs welcome. New commands, new integrations (Google Calendar, Linear, GitHub...) and translations are all great first contributions. See [CONTRIBUTING.md](CONTRIBUTING.md).
+PRs welcome. New commands, new integrations (Google Calendar, Linear, Bitbucket...) and translations are all great first contributions. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Disclaimer
 

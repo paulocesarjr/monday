@@ -50,6 +50,9 @@ working_hours: <e.g. 09:00-18:00>
 timezone: <IANA timezone>
 tone: <descontraída | equilibrada | direta>
 integrations:
+  github: <connected | pending | skipped>
+  gitlab: <connected | pending | skipped>
+  gitlab_url: <e.g. https://gitlab.com, or the self-hosted URL; empty if not used>
   jira: <connected | pending | skipped>
   notion: <connected | pending | skipped>
   slack: <connected | pending | skipped>
@@ -66,6 +69,40 @@ Tell the user in one line where the profile was saved and that they can edit it 
 `/monday:setup` again anytime.
 
 ## Step 3 — Connect the tools
+
+### 3a. Code hosting (GitHub / GitLab)
+
+Ask where their code lives: **GitHub**, **GitLab**, **ambos** or **nenhum** (AskUserQuestion
+works well here). Mark the unchosen ones `skipped`. These servers are registered at the
+user's scope only for what they choose, so first check `claude mcp list` (via Bash): if a
+`github` or `gitlab` server is already there, don't add it again.
+
+**Never ask the user to paste a token into the chat.** Tokens must not end up in the conversation.
+
+**GitHub** (official remote server, authenticated with a token):
+1. Check whether the GitHub CLI is installed and logged in: `gh auth status`.
+2. If it is, offer to register the server using the gh token (it never appears in the chat,
+   because the shell substitutes it):
+   `claude mcp add -s user --transport http github https://api.githubcopilot.com/mcp -H "Authorization: Bearer $(gh auth token)"`
+   Mention in one line that this reuses the gh login's permissions.
+3. If gh isn't available, ask them to create a fine-grained Personal Access Token at
+   https://github.com/settings/personal-access-tokens (read access to repos, pull requests and
+   issues is enough to start). Then ask them to run this **in a separate terminal**, not here:
+   `claude mcp add -s user --transport http github https://api.githubcopilot.com/mcp -H "Authorization: Bearer <TOKEN>"`
+
+**GitLab** (official built-in server, OAuth):
+1. Ask if they use **gitlab.com** or a **self-hosted** instance; for self-hosted, ask the URL.
+   Save it as `gitlab_url`.
+2. Register it (no secret involved, so you can run it yourself):
+   `claude mcp add -s user --transport http gitlab <gitlab_url>/api/v4/mcp`
+3. Tell them to restart Claude Code, run `/mcp`, pick **gitlab** and sign in in the browser.
+   If they get a 403, an admin may need to enable the MCP server for their instance or group,
+   and it may depend on their GitLab version or tier.
+
+Servers added this way usually appear only after restarting Claude Code. If so, mark them
+`pending`, tell the user to restart and run `/monday:setup` again to finish.
+
+### 3b. Other tools
 
 Go through the integrations **one by one**. For each, first check whether its tools are
 already available to you (e.g. Atlassian/Jira or Notion MCP tools in your tool list). If so,

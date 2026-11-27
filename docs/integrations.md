@@ -65,7 +65,7 @@ claude mcp add -s user -e MS365_MCP_TENANT_ID=consumers ms365 -- npx -y @softeri
 Add `--read-only` if you want Monday to only read (no drafts, sending or calendar changes; focus mode won't be able to block time).
 On Windows, wrap the command: `-- cmd /c "npx -y @softeria/ms-365-mcp-server --org-mode --preset outlook"`.
 
-Restart Claude Code, then ask Monday to sign in to Outlook. It calls the server's `login` tool, which shows a URL and a code (device code flow). Open the URL, type the code and sign in. You can also sign in from a terminal: `npx -y @softeria/ms-365-mcp-server --login` (add the same `--org-mode` or `MS365_MCP_TENANT_ID` you used above).
+Restart Claude Code, then ask Monday to sign in to Outlook. It calls the server's `login` tool, which shows a URL and a code (device code flow). Open the URL, type the code and sign in (with your work email for work accounts), then tell Monday "pronto" so it can confirm. The code expires in about 15 minutes; just ask for a new one. Registering the server doesn't sign you in, so if Monday ever says Outlook needs a sign-in (for example after the session expires), it's this same step again. You can also sign in from a terminal: `npx -y @softeria/ms-365-mcp-server --login` (add the same `--org-mode` or `MS365_MCP_TENANT_ID` you used above).
 
 **Company tenants:** many organizations block user consent for third-party apps. If sign-in says an admin needs to approve it, ask IT. `npx -y @softeria/ms-365-mcp-server --org-mode --preset outlook --list-permissions` lists the Graph permissions to send them.
 

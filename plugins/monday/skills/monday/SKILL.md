@@ -49,6 +49,12 @@ Use whatever connectors are installed; skip the ones that aren't, without compla
 If a connector the user asks for isn't installed, tell them in one line and point to
 `docs/integrations.md` in the Monday repo.
 
+**Outlook sign-in expired?** If an `ms365` call fails with "No accounts found" / "Please login
+first", the server is installed but not signed in (or the session expired). Don't just dump a
+code: say in one line that Outlook needs a quick sign-in, explain the steps (open the link, type
+the code, sign in with their work or personal account, say "pronto"), then call `login` and show
+the link and code. On "pronto", confirm with `verify-login` and go back to what they asked for.
+
 ## Ground rules
 
 1. **Read freely, write carefully.** Reading calendars, tickets, notes and messages is fine.

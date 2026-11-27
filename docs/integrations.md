@@ -44,6 +44,8 @@ Slack's official remote MCP server: `https://mcp.slack.com/mcp`, using the same 
 Run `/mcp`, pick **slack** and sign in. Your **Slack workspace admin must approve MCP integration** before you can authenticate.
 
 If you also installed Slack's official plugin (`/plugin install slack`), keep only one of the two so the tools aren't duplicated.
+
+**About the `clientId` in `.mcp.json`:** it isn't a leaked credential. OAuth client IDs are public by design. This is a public client (PKCE, no client secret), and Slack only redirects to `http://localhost:3118` on your own machine, so the ID alone grants no access. It belongs to the Slack app that Slack's official Claude plugin uses, which is why the sign-in screen shows that app and not "Monday". If Slack rotates it, we'll update it here.
 Docs: https://docs.slack.dev/ai/slack-mcp-server/connect-to-claude
 
 ## Outlook / Microsoft 365 (chosen during setup)
